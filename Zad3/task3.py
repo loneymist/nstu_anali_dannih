@@ -8,7 +8,7 @@ with open(r'Zad3\complex.txt','r') as data:
     i=0
     for line in lines:
         nums.append(complex(line.strip()))
-    print('\nLower than enterd:\n')
+    print('\nLower than entered:\n')
     while i < len(nums):
         if math.sqrt(nums[i].real*nums[i].real+nums[i].imag*nums[i].imag) < comp:
             print(nums[i])
