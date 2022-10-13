@@ -69,7 +69,7 @@ while i < 1000000:
 i=0
 t2 = time.time()
 log2 = t2-t1
-print('Math sqrt: ',sqrt1,'|| CM SQRT: ',sqrt2, '\nM sin:',sin1, '|| CM sin:',sin2,'\nM log:',log1,'|| CM log',log2)
+print('Math sqrt:',sqrt1,'|| CM SQRT: ',sqrt2, '\nM sin:',sin1, '|| CM sin:',sin2,'\nM log:',log1,'|| CM log',log2)
 
 
 with open(r'Zad1\table.txt','w') as data:
