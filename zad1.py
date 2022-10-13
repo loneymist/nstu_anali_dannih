@@ -72,7 +72,7 @@ log2 = t2-t1
 print('Math sqrt: ',sqrt1,'|| CM SQRT: ',sqrt2, '\nM sin:',sin1, '|| CM sin:',sin2,'\nM log:',log1,'|| CM log',log2)
 
 
-with open(r'C:\Users\abobu\.vscode\NGTU\KURSI\table.txt','w') as data:
+with open(r'table.txt','w') as data:
     data.write(r'sqrt time CMATH sqrt time MATH sin time CMATH sin time Math log time Cmath log time'+'\n')
     data.write(r'' + str(round(sqrt1,7)) + ' ' + str(round(sqrt2,13)) + ' ' + str(round(sin1,11)) + ' ' + str(round(sin2,12)) + ' ' + str(round(log1,11)) + ' ' + str(round(log2,12)))
 #MATH sqrt time CMATH sqrt time MATH sin time CMATH sin time Math log time Cmath log time
