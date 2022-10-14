@@ -1,23 +1,26 @@
+from multiprocessing.resource_sharer import stop
 from tkinter import N
 
 
-def fun(*nums):
+def fun(*nums,r = 0):
+    try:
+        r += nums[0]
+    except IndexError:
+        print('co')
+    if len(nums) == 1:
+        print('Error (only 1 argument)')
+        stop()
+    if len(nums) > 3:
+        print('Error (>3 arguments)')
+        stop()
     sum = 0
     multi = 1
-    for n in nums:
-        if nums == None:
-            print('const')
-            break
-        if len(nums) == 1:
-            print('Error (only 1 argument)')
-            break
-        if len(nums) > 3:
-            print('Error (>3 arguments)')
-            break
+    for n in nums: 
         if len(nums) == 2:
             sum += n
         if len(nums) == 3:
             multi *= n
+        
 
     if len(nums) == 2:
         print('Sum: ',sum)
