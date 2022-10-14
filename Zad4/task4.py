@@ -6,7 +6,7 @@ def fun(*nums,r = 0):
     try:
         r += nums[0]
     except IndexError:
-        print('co')
+        print('const')
     if len(nums) == 1:
         print('Error (only 1 argument)')
         stop()
