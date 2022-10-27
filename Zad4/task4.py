@@ -1,5 +1,11 @@
 from multiprocessing.resource_sharer import stop
+<<<<<<< HEAD
 
+=======
+from tkinter import N
+
+
+>>>>>>> 2e60a97f35b4915cdc11c23ef002a1972e475da7
 def fun(*nums,r = 0):
     try:
         r += nums[0]
