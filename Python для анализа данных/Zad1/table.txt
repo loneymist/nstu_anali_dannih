@@ -1,2 +1,0 @@
-sqrt time CMATH sqrt time MATH sin time CMATH sin time Math log time Cmath log time
-0.1876476 0.2764499187469 0.18614411354 0.207945823669 0.28197956085 0.25581407547
