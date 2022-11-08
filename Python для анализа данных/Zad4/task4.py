@@ -1,37 +1,34 @@
-from multiprocessing.resource_sharer import stop
-<<<<<<< HEAD
+def fun(*nums,r = 0):                       #Определение функции.
 
-=======
-from tkinter import N
-
-
->>>>>>> 2e60a97f35b4915cdc11c23ef002a1972e475da7
-def fun(*nums,r = 0):
-    try:
+    try:                                    #Вывод const, если кол-во входных данных равно нулю.
         r += nums[0]
     except IndexError:
         print('const')
-    if len(nums) == 1:
+        
+    if len(nums) == 1:                      #Вывод ошибки, если кол-во входных данных равно одному.
         print('Error (only 1 argument)')
-        stop()
-    if len(nums) > 3:
+
+    if len(nums) > 3:                       #Вывод ошибки, если кол-во входных больше, чем три.
         print('Error (>3 arguments)')
-        stop()
+
     sum = 0
     multi = 1
+
     for n in nums: 
-        if len(nums) == 2:
+        if len(nums) == 2:                  #Сложение, если кол-во входных данных равно двум.
             sum += n
-        if len(nums) == 3:
+
+        if len(nums) == 3:                  #Умножение, если кол-во входных данных равно четырём.
             multi *= n
         
 
-    if len(nums) == 2:
+    if len(nums) == 2:                      #Вывод суммы, если кол-во входных данных равно двум.
         print('Sum: ',sum)
+
     if len(nums) == 3:
-        print('Multiply: ',multi)
+        print('Multiplipaction: ',multi)    #Вывод умножения, если кол-во входных данных равно четырём.
 
-
+#Проверки
 fun()
 fun(1.0)
 fun(1.0,5.0)

@@ -1,2 +1,0 @@
-Your list['1.2', '3.1', '12', '111']
-Your elements are not similar type

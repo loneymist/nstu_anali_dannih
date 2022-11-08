@@ -32,6 +32,7 @@ else:
 
 print(dict_out,type(dict_out.get(0)))           #выводим словарь и его тип
 
-with open('Zad2_Out.txt','w') as data:          #записываем результат в файл вместе с типом данных
+with open('Zad2/data.txt','w') as data:          #записываем результат в файл вместе с типом данных
     data.writelines(str(dict_out.items()) + '\n')
     data.write(str(type(dict_out.get(0))))
+data.close
