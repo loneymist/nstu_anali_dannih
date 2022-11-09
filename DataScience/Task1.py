@@ -1,16 +1,27 @@
-import pandas
+from numpy import exp
+import numpy as np
+import matplotlib.pyplot as plt
+from scipy.interpolate import UnivariateSpline
+import pandas as pd
+from sympy import Float
+from scipy.optimize import minimize
 
-data = pandas.read_excel("C:/Users/abobu/.vscode/NGTU/KURSI/GIT/nstu_anali_dannih-1/DataScience/data.xlsx")
-data.head()
-y1 = []
-y = []
-x = []
-for i in data.values:
-    temp = str(i)
-    temp = temp.replace('[','') 
-    temp = temp.replace(']','') 
-    temp = temp.split()
-    x.append(float(temp[0]))
-    y.append(float(temp[1]))
-print('x =',x)
-print('y = ',y)
+data = pd.read_excel('./data.xlsx')
+values_x = np.array(data['x'])
+values_y = np.array(data['y'])
+
+print('x=',values_x)
+print('y=',values_y)
+
+def target(s):
+    return sum((exp(-(values_x/s)**2)-values_y)**2)
+res = minimize(target,np.std(values_y))
+
+f = exp(-(values_x/0.34613752)**2)
+
+plt.plot(values_x, values_y, 'b^', ms = 2)
+plt.plot(values_x, f, 'r', lw = 2)
+
+plt.xlabel('x')
+plt.ylabel('y')
+plt.show()
