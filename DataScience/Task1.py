@@ -14,10 +14,11 @@ print('y=',values_y)
 def target(s):
     return sum((exp(-(values_x/s)**2)-values_y)**2)
 res = minimize(target,np.std(values_y))
+sko = res.get('x')
+print(f'Дисперсия равна: {sko}')
+f = exp(-(values_x/sko)**2)
 
-f = exp(-(values_x/0.34613752)**2)
-
-plt.plot(values_x, values_y, 'b^', ms = 2)
+plt.plot(values_x, values_y, 'b.', ms = 2)
 plt.plot(values_x, f, 'r', lw = 2)
 
 plt.xlabel('x')
