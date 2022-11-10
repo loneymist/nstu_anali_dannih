@@ -1,9 +1,7 @@
 from numpy import exp
 import numpy as np
 import matplotlib.pyplot as plt
-from scipy.interpolate import UnivariateSpline
 import pandas as pd
-from sympy import Float
 from scipy.optimize import minimize
 
 data = pd.read_excel('./data.xlsx')
